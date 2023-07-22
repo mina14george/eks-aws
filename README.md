@@ -27,8 +27,10 @@ WIDEPOT-INTERN/
   │    ├── routeTableAssociation.tf
   │    ├── NATGWs.tf
   │    └── node_group.tf
-  ├── deployment.yaml        
-  ├── README.md              
+  ├── aspnet-mssql
+  ├── deployment.yaml      
+  ├── README.md
+          
 
 ```
 
