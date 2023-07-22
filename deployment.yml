@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: aspnet-mssql-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: aspnet-mssql
+  template:
+    metadata:
+      labels:
+        app: aspnet-mssql
+    spec:
+      containers:
+        - name: web
+          image: docker/awesome-compose-aspnetcore:latest
+          ports:
+            - containerPort: 80
+        - name: mssql
+          image: docker/awesome-compose-mssql:latest
+          ports:
+            - containerPort: 1433
+          env:
+            - name: SA_PASSWORD
+              value: "Passw0rd"
+            - name: ACCEPT_EULA
+              value: "Y"
+  
+# use kubectl apply -f aspnet-mssql-deployment.yaml to apply the deployment 
+# now you get the app deployed on your EKS cluster 
