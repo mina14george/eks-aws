@@ -91,14 +91,14 @@ WIDEPOT-INTERN/
    kubectl apply -f ../deployment.yaml
    ```
 
-## Cleanup
+
 
 ## Infrastructure
 
 
 ![Task](task.png)
 
-
+## Cleanup
 To remove all resources created by Terraform, use the following command:
 
 ```
