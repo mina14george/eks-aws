@@ -18,7 +18,7 @@ spec:
           ports:
             - containerPort: 80
         - name: mssql
-          image: docker/awesome-compose-mssql:latest
+          image: mcr.microsoft.com/azure-sql-edge:1.0.4
           ports:
             - containerPort: 1433
           env:
