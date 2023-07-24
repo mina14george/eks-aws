@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: web
-          image: docker/awesome-compose-aspnetcore:latest
+          image: mena14george/aspent:1.0
           ports:
             - containerPort: 80
         - name: mssql
